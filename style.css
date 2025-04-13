@@ -1,0 +1,117 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f2ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+#weather {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #004080;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    background-color: #3399ff;
+    text-align: center;
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Sections */
+section {
+    padding: 2rem;
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #004080;
+    border-bottom: 3px solid #004080;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+article h2 {
+    font-size: 1.5rem;
+    color: #004080;
+    margin-bottom: 0.5rem;
+}
+
+article p {
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #cce6ff;
+    color: #004080;
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 { font-size: 2rem; }
+    header p { font-size: 1rem; }
+    nav a { font-size: 1rem; margin: 0 1rem; }
+    #weather { font-size: 0.9rem; padding: 4px 8px; }
+}

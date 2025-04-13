@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El 22 en Palabras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="weather">Cargando clima...</div>
+        <h1>El 22 en Palabras</h1>
+        <p>Diario Estudiantil</p>
+    </header>
+
+    <nav>
+        <a href="cde.html">CDE</a>
+        <a href="efemerides.html">Efemérides</a>
+        <a href="desafio-eco.html">Desafío Eco</a>
+        <a href="conmemoraciones.html">Conmemoraciones</a>
+        <a href="historietas.html">Historietas</a>
+        <a href="biblioteca.html">Biblioteca Osvaldo Bayer</a>
+        <a href="otros.html">Otros</a>
+        <a href="articulos.html">Artículos</a>
+    </nav>
+
+    <section>
+        <div class="section-title">Bienvenidos</div>
+        <article>
+            <h2>¿Qué es "El 22 en Palabras"?</h2>
+            <p>Es el diario digital del colegio, hecho por estudiantes para estudiantes. Aquí encontrarás noticias, entrevistas, curiosidades, arte, humor y mucho más.</p>
+        </article>
+    </section>
+
+    <section>
+        <div class="section-title">Novedades recientes</div>
+        <article>
+            <h2>Últimas publicaciones</h2>
+            <p>Visitá cada sección desde el menú para ver los artículos más recientes sobre actividades del CDE, efemérides importantes, desafíos ecológicos y otras propuestas estudiantiles.</p>
+        </article>
+    </section>
+
+    <footer>
+        <h2>Integrantes del Proyecto</h2>
+        <ul>
+            <li>Alumno/a 1</li>
+            <li>Alumno/a 2</li>
+            <li>Alumno/a 3</li>
+            <li>Docente Coordinador/a</li>
+        </ul>
+    </footer>
+
+    <script>
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=Cipolletti&appid=TU_API_KEY&units=metric&lang=es')
+            .then(response => response.json())
+            .then(data => {
+                const temperature = data.main.temp;
+                const description = data.weather[0].description;
+                document.getElementById('weather').innerText = `${Math.round(temperature)}°C - ${description}`;
+            })
+            .catch(error => {
+                document.getElementById('weather').innerText = 'No se pudo cargar el clima';
+                console.error('Error:', error);
+            });
+    </script>
+</body>
+</html>
